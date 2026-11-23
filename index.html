@@ -41,12 +41,28 @@
     h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
     h1 span { color: var(--lime); }
     .subtitle { color: var(--muted); font-size: 14px; max-width: 520px; margin: 0 auto 16px; }
+    .hero-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
     .yt-link {
       display: inline-block; color: #fff; background: rgba(255, 0, 0, 0.18);
       border: 1px solid rgba(255, 70, 70, 0.45);
       padding: 7px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none;
     }
     .yt-link:hover { background: rgba(255, 0, 0, 0.32); }
+    .dash-link {
+      display: inline-block; color: #0d1016; background: var(--lime);
+      border: 1px solid var(--lime);
+      padding: 7px 16px; border-radius: 999px; font-size: 13px; font-weight: 800; text-decoration: none;
+    }
+    .dash-link:hover { filter: brightness(1.08); }
+    .camp-banner {
+      display: none; background: linear-gradient(135deg, rgba(238, 77, 45, 0.14), rgba(215, 255, 63, 0.08));
+      border: 1px solid rgba(238, 77, 45, 0.35); border-radius: 16px;
+      padding: 12px 16px; margin-bottom: 18px;
+    }
+    .camp-banner-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 700; color: #ffd4c8; }
+    .camp-banner-sub { font-size: 12px; color: var(--muted); margin-top: 4px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .trend-chip { font-size: 11px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; color: var(--text); }
+    .exp-pill { font-size: 11px; font-weight: 700; color: #fde68a; background: rgba(245, 158, 11, 0.16); padding: 3px 9px; border-radius: 999px; }
     .controls { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
     .search {
       width: 100%; padding: 13px 16px; border-radius: 14px;
@@ -120,8 +136,13 @@
       <div class="badge">✦ MICROSITE RESMI AFFILIATE SHOPEE</div>
       <h1>Anada <span>Store</span></h1>
       <p class="subtitle">Semua produk pilihan yang dibahas di YouTube Shorts &amp; Podcast <strong>@AnadaStore</strong> — klik langsung menuju toko resmi Shopee.</p>
-      <a class="yt-link" href="https://www.youtube.com/@AnadaStore" target="_blank" rel="noopener">▶ Subscribe YouTube @AnadaStore</a>
+      <div class="hero-actions">
+        <a class="yt-link" href="https://www.youtube.com/@AnadaStore" target="_blank" rel="noopener">▶ Subscribe YouTube @AnadaStore</a>
+        <a class="dash-link" href="./dashboard.html">📊 Live Dashboard UKI (Akses Dimana Saja)</a>
+      </div>
     </header>
+
+    <section id="campaign-banner" class="camp-banner"></section>
 
     <div class="controls">
       <input id="search" class="search" type="search" placeholder="Cari produk (misal: Atomic Habits, stand laptop, mic, tumbler)..." />
@@ -149,10 +170,30 @@
       const res = await fetch('./catalog.json?v=' + Date.now());
       const data = await res.json();
       allProducts = data.products || [];
+      renderBanner(data.catalog_meta || null);
       renderTabs();
       renderGrid();
       renderShorts(data.featured_shorts || []);
       document.getElementById('search').addEventListener('input', renderGrid);
+    }
+
+    function renderBanner(meta) {
+      const el = document.getElementById('campaign-banner');
+      if (!meta || !el) return;
+      const seasonal = (meta.seasonal_campaigns || []).map(c => c.name).slice(0, 2);
+      const trends = (meta.trend_signals || []).slice(0, 4);
+      const refreshed = meta.last_refreshed_wib || '-';
+      el.style.display = 'block';
+      el.innerHTML = `
+        <div class="camp-banner-top">
+          <span>🔥 ${seasonal.length ? seasonal.join(' · ') : 'Katalog Otomatis Mengikuti Tren & Campaign Shopee'}</span>
+          <span style="color:var(--lime);font-size:11.5px;">Auto-Update: ${refreshed}</span>
+        </div>
+        <div class="camp-banner-sub">
+          <span>Sinyal Tren ID:</span>
+          ${trends.length ? trends.map(t => `<span class="trend-chip">#${t}</span>`).join('') : '<span class="trend-chip">Rekomendasi Sesuai Video Terbaru</span>'}
+        </div>
+      `;
     }
 
     function renderTabs() {
@@ -190,6 +231,7 @@
             <div class="card-top">
               <span class="cat-pill">${p.category || 'Pilihan'}</span>
               ${p.badge ? `<span class="xtra-pill">${p.badge}</span>` : ''}
+              ${p.campaign_end ? `<span class="exp-pill">⏳ s.d. ${p.campaign_end}</span>` : ''}
             </div>
             <h2>${p.name}</h2>
             ${(p.price || p.sold) ? `<div class="meta-row">${p.price ? `<span>${p.price}</span>` : ''}${p.sold ? `<span class="sold">• ${p.sold}</span>` : ''}</div>` : ''}

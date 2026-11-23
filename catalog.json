@@ -4,121 +4,90 @@
   "sub_id": "ukishoten",
   "featured_shorts": [
     {
-      "title": "Hacker Geser Satelit Luar Angkasa?! Ft. Teguh Aprianto",
-      "video_id": "tFY0fjeaEAI",
-      "url": "https://youtube.com/shorts/tFY0fjeaEAI"
+      "title": "Celetukan Polos Vior Bikin Studio Pecah! — Part 2 #Shorts",
+      "video_id": "PBjYiHbAu6s",
+      "url": "https://youtube.com/shorts/PBjYiHbAu6s"
     },
     {
-      "title": "3 Script Otomasi Python Bikin Laptop Kerja Sendiri",
-      "video_id": "QuE8EBxxjNI",
-      "url": "https://youtube.com/shorts/QuE8EBxxjNI"
+      "title": "Vior Bikin Kiesha, Zara & Coki Hilang Sabar! — Part 1 #Shorts",
+      "video_id": "cF3UzOnT78s",
+      "url": "https://youtube.com/shorts/cF3UzOnT78s"
     },
     {
-      "title": "Aturan 2 Menit: Cara Menghentikan Prokrastinasi Selamanya",
-      "video_id": "Vx5SMaOkBQs",
-      "url": "https://youtube.com/shorts/Vx5SMaOkBQs"
+      "title": "Fakta Menarik di Balik Cerita Nadia Omara #Shorts",
+      "video_id": "ZGo7UFboBLU",
+      "url": "https://youtube.com/shorts/ZGo7UFboBLU"
+    },
+    {
+      "title": "Insight Mengejutkan dari Nadia Omara soal KHW #Shorts",
+      "video_id": "kU2Y0h1vGso",
+      "url": "https://youtube.com/shorts/kU2Y0h1vGso"
+    },
+    {
+      "title": "Nadia Omara Bicara Kisah Horor & KHW — Bagian 1 #Shorts",
+      "video_id": "AQEcYCC74AA",
+      "url": "https://youtube.com/shorts/AQEcYCC74AA"
+    },
+    {
+      "title": "Bocorkan GTA 6 Cuma Modal TV Hotel?! #Shorts",
+      "video_id": "xdTenSjaxZY",
+      "url": "https://youtube.com/shorts/xdTenSjaxZY"
     }
   ],
   "products": [
     {
-      "id": "otak_fokus",
-      "category": "Otak & Fokus",
-      "icon": "🧠",
-      "accent": "#d7ff3f",
-      "price": "Shopee Mall",
-      "sold": "3RB+ Terjual",
-      "badge": "Komisi XTRA • Mall",
-      "name": "Buku Atomic Habits — James Clear",
-      "description": "Panduan praktis membangun kebiasaan kecil yang berdampak besar untuk fokus, produktivitas, dan kesehatan mental.",
-      "url": "https://s.shopee.co.id/50aqgnsKIs",
-      "keywords": [
-        "otak",
-        "fokus",
-        "produktivitas",
-        "kebiasaan",
-        "belajar",
-        "buku"
-      ]
-    },
-    {
-      "id": "laptop_ai",
-      "category": "AI & Laptop",
-      "icon": "💻",
+      "id": "campaign_phoenix_gadget",
+      "category": "Campaign & Promo",
+      "icon": "⚡",
       "accent": "#38bdf8",
-      "price": "Shopee Mall",
-      "sold": "3RB+ Terjual",
-      "badge": "Shopee Mall • Terlaris",
-      "name": "MILIFE Stand Laptop Aluminium Portable Foldable",
-      "description": "Dudukan laptop & tablet aluminium kokoh dan bisa dilipat — bikin setup kerja, coding, dan produktivitas AI makin ergonomis.",
-      "url": "https://s.shopee.co.id/Lp18HPn98",
+      "price": "Mulai Rp 1.000",
+      "sold": "Star Seller • 1RB+",
+      "badge": "Komisi XTRA s.d. 80%",
+      "commission": "s.d. 80% (Komisi XTRA)",
+      "name": "PHOENIX PHONE — Aksesoris HP & Fast Charging",
+      "description": "Toko Star Seller pilihan Komisi XTRA: kabel data fast charging, speaker Bluetooth portable, dan aksesoris gadget harian.",
+      "url": "https://s.shopee.co.id/5VX7Iuib9a",
       "keywords": [
-        "ai",
-        "laptop",
-        "coding",
-        "kerja",
-        "stand",
-        "meja"
-      ]
+        "charger",
+        "kabel",
+        "hp",
+        "handphone",
+        "fast charging",
+        "speaker",
+        "powerbank",
+        "gadget",
+        "laptop"
+      ],
+      "is_campaign": true,
+      "trend_score": 84.0,
+      "demand_matches": 1,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
-      "id": "podcast_konten",
-      "category": "Podcast & Konten",
-      "icon": "🎙️",
-      "accent": "#a78bfa",
-      "price": "Rp 79.900",
-      "sold": "10RB+ Terjual",
-      "badge": "Best Seller Kreator",
-      "name": "Cantiklife Q8 Mic Wireless Clip On Dual Lavalier",
-      "description": "Mikrofon wireless plug & play (Type-C & iOS) lengkap dengan charging case untuk rekaman podcast, YouTube Shorts, dan live streaming.",
-      "url": "https://s.shopee.co.id/AAIwqYWjPY",
+      "id": "campaign_mihyaz_books",
+      "category": "Campaign & Promo",
+      "icon": "📚",
+      "accent": "#d7ff3f",
+      "price": "Promo Buku",
+      "sold": "Komisi XTRA",
+      "badge": "Komisi XTRA s.d. 80%",
+      "commission": "s.d. 80% (Komisi XTRA)",
+      "name": "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
+      "description": "Koleksi buku sejarah, filsafat, pemikiran Islam, dan wawasan sosial-politik Indonesia dengan penawaran Komisi XTRA.",
+      "url": "https://s.shopee.co.id/2La5X6g1Fo",
       "keywords": [
-        "podcast",
-        "mic",
-        "konten",
-        "youtube",
-        "shorts",
-        "rekam"
-      ]
-    },
-    {
-      "id": "bisnis_umkm",
-      "category": "Bisnis & UMKM",
-      "icon": "📈",
-      "accent": "#fbbf24",
-      "price": "Rp 72.250",
-      "sold": "10RB+ Terjual",
-      "badge": "Best Seller Finansial",
-      "name": "Buku The Psychology of Money (Edisi Revisi) — Morgan Housel",
-      "description": "Pelajaran abadi tentang pola pikir keuangan, bisnis, dan keputusan finansial yang lebih tenang dan terukur.",
-      "url": "https://s.shopee.co.id/8fU93pxHyo",
-      "keywords": [
-        "bisnis",
-        "umkm",
-        "uang",
-        "keuangan",
-        "finansial",
+        "sejarah",
+        "filsafat",
+        "islam",
+        "pemikiran",
+        "ketuhanan",
+        "politik",
         "buku"
-      ]
-    },
-    {
-      "id": "kopi_olahraga",
-      "category": "Kopi & Olahraga",
-      "icon": "☕",
-      "accent": "#fb7185",
-      "price": "Rp 96.630",
-      "sold": "10RB+ Terjual",
-      "badge": "Komisi XTRA • 10RB+",
-      "name": "CIVAGO Tumbler Stainless Vakum Panas & Dingin",
-      "description": "Tumbler baja tahan karat berinsulasi vakum mulut lebar — menjaga kopi hangat atau air dingin lebih lama saat kerja maupun olahraga.",
-      "url": "https://s.shopee.co.id/70Lv4oFXm2",
-      "keywords": [
-        "kopi",
-        "olahraga",
-        "lari",
-        "tumbler",
-        "minum",
-        "kesehatan"
-      ]
+      ],
+      "is_campaign": true,
+      "trend_score": 80.0,
+      "demand_matches": 0,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
       "id": "campaign_wardah_mall",
@@ -143,7 +112,12 @@
         "kulit",
         "promo",
         "brand day"
-      ]
+      ],
+      "is_campaign": true,
+      "campaign_end": "2026-11-27",
+      "trend_score": 57.5,
+      "demand_matches": 0,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
       "id": "campaign_wardah_spray",
@@ -165,56 +139,204 @@
         "tahan lama",
         "glowing",
         "perawatan"
-      ]
+      ],
+      "is_campaign": true,
+      "campaign_end": "2026-11-27",
+      "trend_score": 57.5,
+      "demand_matches": 0,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
-      "id": "campaign_phoenix_gadget",
-      "category": "Campaign & Promo",
-      "icon": "⚡",
+      "id": "laptop_ai",
+      "category": "AI & Laptop",
+      "icon": "💻",
       "accent": "#38bdf8",
-      "price": "Mulai Rp 1.000",
-      "sold": "Star Seller • 1RB+",
-      "badge": "Komisi XTRA s.d. 80%",
-      "commission": "s.d. 80% (Komisi XTRA)",
-      "name": "PHOENIX PHONE — Aksesoris HP & Fast Charging",
-      "description": "Toko Star Seller pilihan Komisi XTRA: kabel data fast charging, speaker Bluetooth portable, dan aksesoris gadget harian.",
-      "url": "https://s.shopee.co.id/5VX7Iuib9a",
+      "price": "Shopee Mall",
+      "sold": "3RB+ Terjual",
+      "badge": "Shopee Mall • Komisi 15%",
+      "commission": "15%",
+      "name": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
+      "description": "Dudukan laptop & tablet aluminium kokoh dan bisa dilipat — bikin setup kerja, coding, dan produktivitas AI makin ergonomis.",
+      "url": "https://s.shopee.co.id/Lp18HPn98",
       "keywords": [
-        "hp",
-        "handphone",
-        "charger",
-        "kabel",
-        "fast charging",
-        "gadget",
-        "elektronik",
-        "speaker",
-        "teknologi"
-      ]
+        "ai",
+        "laptop",
+        "coding",
+        "koding",
+        "python",
+        "otomasi",
+        "script",
+        "programmer",
+        "developer",
+        "software",
+        "open",
+        "source",
+        "prompt",
+        "prompting"
+      ],
+      "is_campaign": false,
+      "trend_score": 42.5,
+      "demand_matches": 10,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
-      "id": "campaign_mihyaz_books",
-      "category": "Campaign & Promo",
-      "icon": "📚",
+      "id": "otak_fokus",
+      "category": "Otak & Fokus",
+      "icon": "🧠",
       "accent": "#d7ff3f",
-      "price": "Promo Buku",
-      "sold": "Komisi XTRA",
-      "badge": "Komisi XTRA s.d. 80%",
-      "commission": "s.d. 80% (Komisi XTRA)",
-      "name": "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
-      "description": "Koleksi buku sejarah, filsafat, pemikiran Islam, dan wawasan sosial-politik Indonesia dengan penawaran Komisi XTRA.",
-      "url": "https://s.shopee.co.id/2La5X6g1Fo",
+      "price": "Shopee Mall",
+      "sold": "3RB+ Terjual",
+      "badge": "Komisi XTRA • Mall",
+      "commission": "7% (Komisi XTRA)",
+      "name": "Buku Atomic Habits - James Clear (Komisi XTRA)",
+      "description": "Panduan praktis membangun kebiasaan kecil yang berdampak besar untuk fokus, produktivitas, dan kesehatan mental.",
+      "url": "https://s.shopee.co.id/50aqgnsKIs",
       "keywords": [
-        "buku",
-        "sejarah",
-        "filsafat",
-        "baca",
-        "literasi",
-        "ilmu",
-        "wawasan",
-        "pemikiran",
-        "edukasi",
-        "kuliah"
-      ]
+        "otak",
+        "fokus",
+        "saraf",
+        "kebiasaan",
+        "habit",
+        "produktivitas",
+        "prokrastinasi",
+        "belajar",
+        "skill",
+        "karir",
+        "mindset",
+        "atensi",
+        "konsentrasi",
+        "malas",
+        "disiplin",
+        "lulus"
+      ],
+      "is_campaign": false,
+      "trend_score": 38.5,
+      "demand_matches": 16,
+      "updated_at": "2026-11-23T14:40:46+07:00"
+    },
+    {
+      "id": "podcast_konten",
+      "category": "Podcast & Konten",
+      "icon": "🎙️",
+      "accent": "#a78bfa",
+      "price": "Rp 79.900",
+      "sold": "10RB+ Terjual",
+      "badge": "Best Seller Kreator • 13%",
+      "commission": "13%",
+      "name": "Mic Wireless Clip On Dual Lavalier Q8 (Komisi 13%)",
+      "description": "Mikrofon wireless plug & play (Type-C & iOS) lengkap dengan charging case untuk rekaman podcast, YouTube Shorts, dan video produk.",
+      "url": "https://s.shopee.co.id/AAIwqYWjPY",
+      "keywords": [
+        "podcast",
+        "mic",
+        "mikrofon",
+        "rekam",
+        "kreator",
+        "konten",
+        "faceless",
+        "editing",
+        "video"
+      ],
+      "is_campaign": false,
+      "trend_score": 26.5,
+      "demand_matches": 5,
+      "updated_at": "2026-11-23T14:40:46+07:00"
+    },
+    {
+      "id": "kopi_olahraga",
+      "category": "Kopi & Olahraga",
+      "icon": "☕",
+      "accent": "#fb7185",
+      "price": "Rp 96.630",
+      "sold": "10RB+ Terjual",
+      "badge": "Komisi XTRA 18.15%",
+      "commission": "18.15% (Komisi XTRA)",
+      "name": "CIVAGO Tumbler Stainless Vakum Panas/Dingin (Komisi XTRA 18%)",
+      "description": "Tumbler baja tahan karat berinsulasi vakum mulut lebar — menjaga kopi hangat atau air dingin lebih lama saat kerja maupun olahraga.",
+      "url": "https://s.shopee.co.id/70Lv4oFXm2",
+      "keywords": [
+        "kopi",
+        "ngopi",
+        "lari",
+        "olahraga",
+        "minum",
+        "kafein",
+        "gym",
+        "fitness",
+        "trail"
+      ],
+      "is_campaign": false,
+      "trend_score": 9.07,
+      "demand_matches": 0,
+      "updated_at": "2026-11-23T14:40:46+07:00"
+    },
+    {
+      "id": "bisnis_umkm",
+      "category": "Bisnis & UMKM",
+      "icon": "📈",
+      "accent": "#fbbf24",
+      "price": "Rp 72.250",
+      "sold": "10RB+ Terjual",
+      "badge": "Best Seller Finansial • 10%",
+      "commission": "10%",
+      "name": "Buku The Psychology of Money - Morgan Housel (Komisi 10%)",
+      "description": "Pelajaran abadi tentang pola pikir keuangan, bisnis, dan keputusan finansial yang lebih tenang dan terukur.",
+      "url": "https://s.shopee.co.id/8fU93pxHyo",
+      "keywords": [
+        "bisnis",
+        "umkm",
+        "uang",
+        "keuangan",
+        "finansial",
+        "investasi",
+        "marketing",
+        "jualan",
+        "cuan",
+        "usaha",
+        "ekonomi",
+        "gaji",
+        "mahal"
+      ],
+      "is_campaign": false,
+      "trend_score": 9.0,
+      "demand_matches": 1,
+      "updated_at": "2026-11-23T14:40:46+07:00"
     }
-  ]
+  ],
+  "catalog_meta": {
+    "last_refreshed_wib": "2026-11-23 14:40 WIB",
+    "last_refreshed_iso": "2026-11-23T14:40:46+07:00",
+    "seasonal_campaigns": [
+      {
+        "name": "Misi Affiliate: Hujan Voucher Desember & 12.12 Sale",
+        "tag": "hujan_voucher_desember",
+        "end_date": "2026-12-15"
+      }
+    ],
+    "trend_signals": [
+      "danantara",
+      "tim nasional sepak bola vietnam",
+      "tanggal merah 2027",
+      "victor dethan",
+      "dr",
+      "korupsi",
+      "2030",
+      "brentford vs everton"
+    ],
+    "expiring_soon": [],
+    "detected_gaps": [
+      "Kebutuhan Video AI/Coding: Keyboard/Mouse Wireless atau USB Hub Desk",
+      "Kebutuhan Video Kreator/Faceless: Tripod HP & Lampu LED Studio",
+      "Campaign Musiman Aktif: Misi Affiliate: Hujan Voucher Desember & 12.12 Sale (belum ada link promo di katalog)"
+    ],
+    "total_active": 9,
+    "total_archived": 0,
+    "active_campaigns": [
+      "PHOENIX PHONE — Aksesoris HP & Fast Charging",
+      "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
+      "Wardah Official Shop — Brand Day Paragon",
+      "Wardah Longwear Skin-Setter Setting Spray Colorfit 80ml"
+    ],
+    "last_catalog_alert_date": ""
+  }
 }
