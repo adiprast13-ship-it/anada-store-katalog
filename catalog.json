@@ -90,6 +90,39 @@
       "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
+      "id": "laptop_ai",
+      "category": "AI & Laptop",
+      "icon": "💻",
+      "accent": "#38bdf8",
+      "price": "Shopee Mall",
+      "sold": "3RB+ Terjual",
+      "badge": "Shopee Mall • Komisi 15%",
+      "commission": "15%",
+      "name": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
+      "description": "Dudukan laptop & tablet aluminium kokoh dan bisa dilipat — bikin setup kerja, coding, dan produktivitas AI makin ergonomis.",
+      "url": "https://s.shopee.co.id/Lp18HPn98",
+      "keywords": [
+        "ai",
+        "laptop",
+        "coding",
+        "koding",
+        "python",
+        "otomasi",
+        "script",
+        "programmer",
+        "developer",
+        "software",
+        "open",
+        "source",
+        "prompt",
+        "prompting"
+      ],
+      "is_campaign": false,
+      "trend_score": 62.5,
+      "demand_matches": 10,
+      "updated_at": "2026-11-23T14:40:46+07:00"
+    },
+    {
       "id": "campaign_wardah_mall",
       "category": "Campaign & Promo",
       "icon": "✨",
@@ -147,36 +180,31 @@
       "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
-      "id": "laptop_ai",
-      "category": "AI & Laptop",
-      "icon": "💻",
-      "accent": "#38bdf8",
-      "price": "Shopee Mall",
-      "sold": "3RB+ Terjual",
-      "badge": "Shopee Mall • Komisi 15%",
-      "commission": "15%",
-      "name": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
-      "description": "Dudukan laptop & tablet aluminium kokoh dan bisa dilipat — bikin setup kerja, coding, dan produktivitas AI makin ergonomis.",
-      "url": "https://s.shopee.co.id/Lp18HPn98",
+      "id": "podcast_konten",
+      "category": "Podcast & Konten",
+      "icon": "🎙️",
+      "accent": "#a78bfa",
+      "price": "Rp 79.900",
+      "sold": "10RB+ Terjual",
+      "badge": "Best Seller Kreator • 13%",
+      "commission": "13%",
+      "name": "Mic Wireless Clip On Dual Lavalier Q8 (Komisi 13%)",
+      "description": "Mikrofon wireless plug & play (Type-C & iOS) lengkap dengan charging case untuk rekaman podcast, YouTube Shorts, dan video produk.",
+      "url": "https://s.shopee.co.id/AAIwqYWjPY",
       "keywords": [
-        "ai",
-        "laptop",
-        "coding",
-        "koding",
-        "python",
-        "otomasi",
-        "script",
-        "programmer",
-        "developer",
-        "software",
-        "open",
-        "source",
-        "prompt",
-        "prompting"
+        "podcast",
+        "mic",
+        "mikrofon",
+        "rekam",
+        "kreator",
+        "konten",
+        "faceless",
+        "editing",
+        "video"
       ],
       "is_campaign": false,
-      "trend_score": 42.5,
-      "demand_matches": 10,
+      "trend_score": 46.5,
+      "demand_matches": 5,
       "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
@@ -212,34 +240,6 @@
       "is_campaign": false,
       "trend_score": 38.5,
       "demand_matches": 16,
-      "updated_at": "2026-11-23T14:40:46+07:00"
-    },
-    {
-      "id": "podcast_konten",
-      "category": "Podcast & Konten",
-      "icon": "🎙️",
-      "accent": "#a78bfa",
-      "price": "Rp 79.900",
-      "sold": "10RB+ Terjual",
-      "badge": "Best Seller Kreator • 13%",
-      "commission": "13%",
-      "name": "Mic Wireless Clip On Dual Lavalier Q8 (Komisi 13%)",
-      "description": "Mikrofon wireless plug & play (Type-C & iOS) lengkap dengan charging case untuk rekaman podcast, YouTube Shorts, dan video produk.",
-      "url": "https://s.shopee.co.id/AAIwqYWjPY",
-      "keywords": [
-        "podcast",
-        "mic",
-        "mikrofon",
-        "rekam",
-        "kreator",
-        "konten",
-        "faceless",
-        "editing",
-        "video"
-      ],
-      "is_campaign": false,
-      "trend_score": 26.5,
-      "demand_matches": 5,
       "updated_at": "2026-11-23T14:40:46+07:00"
     },
     {
@@ -304,8 +304,8 @@
     }
   ],
   "catalog_meta": {
-    "last_refreshed_wib": "2026-11-23 14:40 WIB",
-    "last_refreshed_iso": "2026-11-23T14:40:46+07:00",
+    "last_refreshed_wib": "2026-11-23 17:06 WIB",
+    "last_refreshed_iso": "2026-11-23T17:06:12+07:00",
     "seasonal_campaigns": [
       {
         "name": "Misi Affiliate: Hujan Voucher Desember & 12.12 Sale",
@@ -314,14 +314,14 @@
       }
     ],
     "trend_signals": [
-      "danantara",
-      "tim nasional sepak bola vietnam",
-      "tanggal merah 2027",
-      "victor dethan",
-      "dr",
-      "korupsi",
-      "2030",
-      "brentford vs everton"
+      "wapres",
+      "ary bastari",
+      "amran sulaiman",
+      "michael owen",
+      "buron",
+      "bahlil lahadalia",
+      "atr bpn",
+      "monza vs fiorentina"
     ],
     "expiring_soon": [],
     "detected_gaps": [
