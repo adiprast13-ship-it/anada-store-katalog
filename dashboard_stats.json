@@ -1,0 +1,585 @@
+{
+  "ok": true,
+  "timestamp": "2026-11-23 20:21:49 WIB",
+  "iso_timestamp": "2026-11-23T13:21:49Z",
+  "youtube_monetization": {
+    "ok": true,
+    "channel_id": "UCXBg06RdQPe2PqTyTF694Aw",
+    "channel_title": "Anada Store",
+    "channel_handle": "@anadastore",
+    "channel_url": "https://www.youtube.com/@AnadaStore",
+    "fetched_epoch": 1795439928.2328482,
+    "synced_wib": "2026-11-23 20:18 WIB",
+    "subscribers": 1,
+    "total_views": 5769,
+    "total_videos": 29,
+    "uploads_90d": 29,
+    "views_90d": 5769,
+    "total_likes": 65,
+    "total_comments": 0,
+    "avg_views_per_video": 198.9,
+    "watch_hours_365d": null,
+    "watch_hours_note": "Cek di YouTube Studio > Earn (butuh scope Analytics API)",
+    "tier1": {
+      "name": "Tier 1 YPP Awal (Shopping Affiliate, Super Thanks & Membership)",
+      "subscribers": {
+        "current": 1,
+        "target": 500,
+        "pct": 0.2,
+        "remaining": 499,
+        "met": false
+      },
+      "uploads_90d": {
+        "current": 29,
+        "target": 3,
+        "pct": 100.0,
+        "remaining": 0,
+        "met": true
+      },
+      "shorts_views_90d": {
+        "current": 5769,
+        "target": 3000000,
+        "pct": 0.19,
+        "remaining": 2994231,
+        "met": false
+      },
+      "watch_hours_365d": {
+        "current": null,
+        "target": 3000,
+        "pct": 0.0,
+        "status": "NOT_AVAILABLE",
+        "note": "Cek di YouTube Studio > Earn (butuh scope Analytics API)"
+      }
+    },
+    "tier2": {
+      "name": "Tier 2 YPP Penuh (Iklan AdSense & Bagi Hasil Shorts Feed)",
+      "subscribers": {
+        "current": 1,
+        "target": 1000,
+        "pct": 0.1,
+        "remaining": 999,
+        "met": false
+      },
+      "shorts_views_90d": {
+        "current": 5769,
+        "target": 10000000,
+        "pct": 0.06,
+        "remaining": 9994231,
+        "met": false
+      },
+      "watch_hours_365d": {
+        "current": null,
+        "target": 4000,
+        "pct": 0.0,
+        "status": "NOT_AVAILABLE",
+        "note": "Cek di YouTube Studio > Earn (butuh scope Analytics API)"
+      }
+    },
+    "sprint": {
+      "subscribers": {
+        "current": 1,
+        "target": 10,
+        "pct": 10.0,
+        "remaining": 9
+      },
+      "views_90d": {
+        "current": 5769,
+        "target": 10000,
+        "pct": 57.69,
+        "remaining": 4231
+      }
+    },
+    "top_videos": [
+      {
+        "video_id": "1dvTmF3by7U",
+        "title": "Keciduk Interpol Karena Rekening Anomali! #Shorts",
+        "views": 1293,
+        "likes": 13,
+        "comments": 0,
+        "url": "https://youtube.com/shorts/1dvTmF3by7U"
+      },
+      {
+        "video_id": "PjmQnDWU8pY",
+        "title": "Panduan Memahami Matematika dan Berpikir Kritis",
+        "views": 1248,
+        "likes": 25,
+        "comments": 0,
+        "url": "https://youtube.com/shorts/PjmQnDWU8pY"
+      },
+      {
+        "video_id": "2Qc16nsTCDc",
+        "title": "FAKTA YANG JARANG ORANG TAHU | Daud Tony Ramalkan Pulau Jawa Akan Dilanda Tsunami",
+        "views": 1113,
+        "likes": 6,
+        "comments": 0,
+        "url": "https://youtube.com/shorts/2Qc16nsTCDc"
+      },
+      {
+        "video_id": "iSeQI4QqGCM",
+        "title": "OPENING HIGHLIGHT PALING SERU | Daud Tony Ramalkan Pulau Jawa Akan Dilanda Tsunami",
+        "views": 961,
+        "likes": 10,
+        "comments": 0,
+        "url": "https://youtube.com/shorts/iSeQI4QqGCM"
+      },
+      {
+        "video_id": "XVq3Fg97H6E",
+        "title": "Kenapa Belajar Kuliah Nggak Harus Rumit?",
+        "views": 313,
+        "likes": 8,
+        "comments": 0,
+        "url": "https://youtube.com/shorts/XVq3Fg97H6E"
+      }
+    ]
+  },
+  "system": {
+    "os": "Linux (Apex Core Engine)",
+    "hostname": "Apex-UKI-Core",
+    "battery": {
+      "available": true,
+      "percent": 3,
+      "status": "Discharging",
+      "is_charging": false,
+      "badge": "3% (Discharging)"
+    },
+    "connection": {
+      "status": "Online (Terhubung)",
+      "online": true,
+      "latency_ms": 22.2,
+      "mode": "Remote Public Telemetry (Akses Global)"
+    },
+    "ram": {
+      "total_gb": 7.49,
+      "used_gb": 4.45,
+      "free_gb": 3.04,
+      "percent": 59.4,
+      "swap_total_gb": 2.0,
+      "swap_used_gb": 0.97,
+      "swap_percent": 48.4
+    },
+    "rom": {
+      "total_gb": 233.2,
+      "used_gb": 79.1,
+      "free_gb": 142.1,
+      "percent": 33.9
+    },
+    "temperature": {
+      "cpu_c": 56.0,
+      "status": "Aman (Optimal)",
+      "zones": [
+        {
+          "zone": "thermal_zone2",
+          "type": "SEN2",
+          "temp_c": 34.0
+        },
+        {
+          "zone": "thermal_zone0",
+          "type": "acpitz",
+          "temp_c": 27.8
+        },
+        {
+          "zone": "thermal_zone5",
+          "type": "iwlwifi_1",
+          "temp_c": 41.0
+        },
+        {
+          "zone": "thermal_zone3",
+          "type": "SEN3",
+          "temp_c": 33.0
+        },
+        {
+          "zone": "thermal_zone1",
+          "type": "INT3400 Thermal",
+          "temp_c": 20.0
+        },
+        {
+          "zone": "thermal_zone6",
+          "type": "x86_pkg_temp",
+          "temp_c": 56.0
+        }
+      ]
+    },
+    "cpu": {
+      "cores": 4,
+      "load_1m": 0.85,
+      "load_5m": 1.09,
+      "load_15m": 1.39,
+      "uptime_hours": 9.3
+    },
+    "services": {
+      "uki-backend": "active",
+      "uki-hato": "active",
+      "uki-virtual-office": "active"
+    }
+  },
+  "tasks": {
+    "total": 51,
+    "status_breakdown": {
+      "DONE": 1,
+      "blocked": 19,
+      "done": 29,
+      "failed": 1,
+      "ready_for_review": 1
+    },
+    "completed": 30,
+    "running": 0,
+    "queued": 0,
+    "recent_tasks": [
+      {
+        "id": 105,
+        "agent": "UKI",
+        "title": "buat 1 faceless video mengenai cara prompting yang benar.",
+        "priority": "P1",
+        "status": "DONE",
+        "updated_at": "2026-11-23T07:17:06+00:00"
+      },
+      {
+        "id": 104,
+        "agent": "KARASU",
+        "title": "Edit Video Lama @AnadaStore & Sisipkan Link Shopee Affiliate Wardah",
+        "priority": "P0",
+        "status": "DONE",
+        "updated_at": "2026-11-23T06:43:33+00:00"
+      },
+      {
+        "id": 103,
+        "agent": "FUMI",
+        "title": "cek ulang gdrrive",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-23T03:05:59+00:00"
+      },
+      {
+        "id": 102,
+        "agent": "FUMI",
+        "title": "cek ulang gdrrive",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-23T03:05:55+00:00"
+      },
+      {
+        "id": 101,
+        "agent": "FUMI",
+        "title": "cek ulang gdrrive",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-23T03:05:51+00:00"
+      },
+      {
+        "id": 100,
+        "agent": "HIKARI",
+        "title": "Saya ingin upload hasil clip dari video ini",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-22T10:14:21+00:00"
+      },
+      {
+        "id": 99,
+        "agent": "HIKARI",
+        "title": "Tolong kirim video hasil clip hari ini kesini",
+        "priority": "P1",
+        "status": "DONE",
+        "updated_at": "2026-11-22T10:12:47+00:00"
+      },
+      {
+        "id": 98,
+        "agent": "KARASU",
+        "title": "Buka blokir, owner ingin video diupload semua",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-22T10:10:34+00:00"
+      },
+      {
+        "id": 97,
+        "agent": "KURO",
+        "title": "semua hasil klip dan kode project mya",
+        "priority": "P1",
+        "status": "DONE",
+        "updated_at": "2026-11-22T09:36:31+00:00"
+      },
+      {
+        "id": 96,
+        "agent": "HIKARI",
+        "title": "hasil clip",
+        "priority": "P1",
+        "status": "DONE",
+        "updated_at": "2026-11-22T04:40:43+00:00"
+      },
+      {
+        "id": 95,
+        "agent": "KARASU",
+        "title": "referensi editing https://youtube.com/shorts/PjmQnDWU8pY?si=8kRAW7Xb0f7Afb1x",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-21T23:27:32+00:00"
+      },
+      {
+        "id": 94,
+        "agent": "UKI",
+        "title": "bisakah aku menambah aturan atau memberi referensi untuk editing konten baru",
+        "priority": "P1",
+        "status": "BLOCKED",
+        "updated_at": "2026-11-21T23:26:31+00:00"
+      }
+    ],
+    "agents": {
+      "uki": 18,
+      "sora": 3,
+      "mikan": 1,
+      "hikari": 8,
+      "karasu": 12,
+      "hana": 1,
+      "shiro": 1,
+      "kuro": 3,
+      "fumi": 4
+    }
+  },
+  "suggestions": {
+    "clipping_recommendations": [
+      {
+        "id": "sched_1",
+        "title": "Bedah Otak 100+ Pasien: Fakta Mengejutkan Dokter Saraf #Shorts",
+        "source": "Antrean Jadwal (2026-11-24 12:00 WIB)",
+        "reason": "Lebih dari 100 pasien sudah ditangani dokter bedah saraf ini — dan fakta di balik cara kerja otak manusia ternyata bikin kaget!",
+        "target_product": "Buku Atomic Habits - James Clear (Komisi XTRA)",
+        "product_url": "https://s.shopee.co.id/50aqgnsKIs",
+        "hook": "Lebih dari 100 pasien sudah ditangani dokter bedah saraf ini — dan fakta di balik cara kerja otak ma",
+        "status": "Terjadwal Upload"
+      },
+      {
+        "id": "sched_2",
+        "title": "Strategi 20 Menit Kerja Fokus Biar Otak Nggak Overload #Shorts",
+        "source": "Antrean Jadwal (2026-11-24 17:30 WIB)",
+        "reason": "Kenapa otak cepat lelah saat multitasking? Ini strategi 20 menit pertama agar fokus tetap tajam menurut dokter bedah saraf!",
+        "target_product": "Buku Atomic Habits - James Clear (Komisi XTRA)",
+        "product_url": "https://s.shopee.co.id/50aqgnsKIs",
+        "hook": "Kenapa otak cepat lelah saat multitasking? Ini strategi 20 menit pertama agar fokus tetap tajam menu",
+        "status": "Terjadwal Upload"
+      },
+      {
+        "id": "sched_3",
+        "title": "Kenapa Otak Cepat Kehilangan Fokus? Ini Penjelasannya #Shorts",
+        "source": "Antrean Jadwal (2026-11-24 19:30 WIB)",
+        "reason": "Saat otak kehilangan atensi, pemicu baru langsung mengambil alih konsentrasi kita. Simak cara melatih ulang fokus otak!",
+        "target_product": "Buku Atomic Habits - James Clear (Komisi XTRA)",
+        "product_url": "https://s.shopee.co.id/50aqgnsKIs",
+        "hook": "Saat otak kehilangan atensi, pemicu baru langsung mengambil alih konsentrasi kita. Simak cara melati",
+        "status": "Terjadwal Upload"
+      },
+      {
+        "id": "pend_4",
+        "title": "Ending Paling Kocak Vior vs Coki & Kiesha! — Part 3 #Shorts",
+        "source": "Manifest Antrean @AnadaStore",
+        "reason": "Video Shorts hasil produksi siap distribusi + link Shopee otomatis.",
+        "target_product": "Wardah Official Shop / Katalog Anada Store",
+        "product_url": "https://adiprast13-ship-it.github.io/anada-store-katalog/",
+        "hook": "Ending Paling Kocak Vior vs Coki & Kiesha! — Part 3 #Shorts",
+        "status": "Siap Tayang"
+      },
+      {
+        "id": "pend_5",
+        "title": "Kenapa Viral Jadi Kang Timpa? Ft. Raymond Chin #Shorts",
+        "source": "Manifest Antrean @AnadaStore",
+        "reason": "Video Shorts hasil produksi siap distribusi + link Shopee otomatis.",
+        "target_product": "Wardah Official Shop / Katalog Anada Store",
+        "product_url": "https://adiprast13-ship-it.github.io/anada-store-katalog/",
+        "hook": "Kenapa Viral Jadi Kang Timpa? Ft. Raymond Chin #Shorts",
+        "status": "Siap Tayang"
+      }
+    ],
+    "faceless_video_concepts": [
+      {
+        "id": "face_1",
+        "topic": "AI Bisa Balas Chat Pelanggan, Tapi Jangan Lepas Kendali",
+        "hook": "Simak rahasia AI Bisa Balas Chat Pelanggan, Tapi Jangan Lepas Ke!",
+        "duration": "45 detik",
+        "template": "Studio Maliki 3.0 — Motion Vertical 9:16",
+        "visual_style": "Cyberpunk Motion Typography + AI Voiceover",
+        "call_to_action": "Cek link rekomendasi di bio / https://adiprast13-ship-it.github.io/anada-store-katalog/",
+        "target_product": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
+        "product_url": "https://s.shopee.co.id/Lp18HPn98"
+      },
+      {
+        "id": "face_2",
+        "topic": "Tugas Dibuat AI? Ini Cara Memastikan Kamu Tetap Belajar",
+        "hook": "Simak rahasia Tugas Dibuat AI? Ini Cara Memastikan Kamu Tetap Be!",
+        "duration": "45 detik",
+        "template": "Studio Maliki 3.0 — Motion Vertical 9:16",
+        "visual_style": "Cyberpunk Motion Typography + AI Voiceover",
+        "call_to_action": "Cek link rekomendasi di bio / https://adiprast13-ship-it.github.io/anada-store-katalog/",
+        "target_product": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
+        "product_url": "https://s.shopee.co.id/Lp18HPn98"
+      },
+      {
+        "id": "face_3",
+        "topic": "Satu Jam Kerja Lebih Rapi dengan Sistem Tiga Kotak",
+        "hook": "Simak rahasia Satu Jam Kerja Lebih Rapi dengan Sistem Tiga Kotak!",
+        "duration": "45 detik",
+        "template": "Studio Maliki 3.0 — Motion Vertical 9:16",
+        "visual_style": "Cyberpunk Motion Typography + AI Voiceover",
+        "call_to_action": "Cek link rekomendasi di bio / https://adiprast13-ship-it.github.io/anada-store-katalog/",
+        "target_product": "Wardah Official Shop / Katalog Anada Store",
+        "product_url": "https://adiprast13-ship-it.github.io/anada-store-katalog/"
+      }
+    ]
+  },
+  "models": {
+    "active_provider": "HERMES",
+    "primary_model": "hermes (gemini-4-neon-high)",
+    "status": "ONLINE",
+    "mode": "api_server",
+    "fallback_pool": [
+      "antigravity-subscription-directsdk:gemini-4-neon-high",
+      "antigravity-subscription-directsdk:gemini-3.8-flash-high",
+      "antigravity-subscription-directsdk:claude-sonnet-5-5-medium",
+      "opencode-free:deepseek-v4.1-flash-free",
+      "openai-codex:gpt-6.1-sol"
+    ],
+    "agent_specialists": [
+      {
+        "agent": "UKI",
+        "role": "Koordinator & Pengambil Keputusan",
+        "model": "Hermes Brain (gemini-4-neon-high)",
+        "status": "AKTIF"
+      },
+      {
+        "agent": "KARASU",
+        "role": "Distribusi Sosmed & YouTube Data API",
+        "model": "Claude Sonnet 5.5 / Hermes API",
+        "status": "AKTIF"
+      },
+      {
+        "agent": "HIKARI",
+        "role": "Riset Ide Konten & Kurasi Viral",
+        "model": "Gemini 3.8 Flash High Speed",
+        "status": "AKTIF"
+      },
+      {
+        "agent": "SUARA",
+        "role": "Voice Synthesis & Audio Engineer",
+        "model": "Piper TTS Indonesian Natural AI",
+        "status": "LOKAL"
+      },
+      {
+        "agent": "TAKA",
+        "role": "Desain Thumbnail & Visual Prompt",
+        "model": "Pillow / OpenCV Smart Reframe",
+        "status": "LOKAL"
+      },
+      {
+        "agent": "SORA",
+        "role": "Penjadwalan Otomatis Jam WIB",
+        "model": "Watchdog Scheduler (12:00, 17:30, 19:30)",
+        "status": "AKTIF"
+      },
+      {
+        "agent": "HATO",
+        "role": "Liaison Bot & Notifikasi Telegram",
+        "model": "Telegram Bot API Daemon (Terhubung)",
+        "status": "AKTIF"
+      }
+    ]
+  },
+  "catalog": {
+    "total_active": 9,
+    "total_archived": 0,
+    "last_refreshed_wib": "2026-11-23 17:06 WIB",
+    "seasonal_campaigns": [
+      {
+        "name": "Misi Affiliate: Hujan Voucher Desember & 12.12 Sale",
+        "tag": "hujan_voucher_desember",
+        "end_date": "2026-12-15"
+      }
+    ],
+    "active_campaigns": [
+      "PHOENIX PHONE — Aksesoris HP & Fast Charging",
+      "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
+      "Wardah Official Shop — Brand Day Paragon",
+      "Wardah Longwear Skin-Setter Setting Spray Colorfit 80ml"
+    ],
+    "expiring_soon": [],
+    "trend_signals": [
+      "wapres",
+      "ary bastari",
+      "amran sulaiman",
+      "michael owen",
+      "buron",
+      "bahlil lahadalia",
+      "atr bpn",
+      "monza vs fiorentina"
+    ],
+    "detected_gaps": [
+      "Kebutuhan Video AI/Coding: Keyboard/Mouse Wireless atau USB Hub Desk",
+      "Kebutuhan Video Kreator/Faceless: Tripod HP & Lampu LED Studio",
+      "Campaign Musiman Aktif: Misi Affiliate: Hujan Voucher Desember & 12.12 Sale (belum ada link promo di katalog)"
+    ],
+    "top_products": [
+      {
+        "name": "PHOENIX PHONE — Aksesoris HP & Fast Charging",
+        "category": "Campaign & Promo",
+        "commission": "s.d. 80% (Komisi XTRA)",
+        "url": "https://s.shopee.co.id/5VX7Iuib9a",
+        "is_campaign": true,
+        "campaign_end": null,
+        "trend_score": 84.0,
+        "demand_matches": 1
+      },
+      {
+        "name": "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
+        "category": "Campaign & Promo",
+        "commission": "s.d. 80% (Komisi XTRA)",
+        "url": "https://s.shopee.co.id/2La5X6g1Fo",
+        "is_campaign": true,
+        "campaign_end": null,
+        "trend_score": 80.0,
+        "demand_matches": 0
+      },
+      {
+        "name": "MILIFE Stand Laptop Aluminium Portable (Komisi 15%)",
+        "category": "AI & Laptop",
+        "commission": "15%",
+        "url": "https://s.shopee.co.id/Lp18HPn98",
+        "is_campaign": false,
+        "campaign_end": null,
+        "trend_score": 62.5,
+        "demand_matches": 10
+      },
+      {
+        "name": "Wardah Official Shop — Brand Day Paragon",
+        "category": "Campaign & Promo",
+        "commission": "15% (Brand Day Paragon)",
+        "url": "https://s.shopee.co.id/4VeaCnAfLI",
+        "is_campaign": true,
+        "campaign_end": "2026-11-27",
+        "trend_score": 57.5,
+        "demand_matches": 0
+      },
+      {
+        "name": "Wardah Longwear Skin-Setter Setting Spray Colorfit 80ml",
+        "category": "Campaign & Promo",
+        "commission": "15% (Komisi XTRA)",
+        "url": "https://s.shopee.co.id/114hwlW6FO",
+        "is_campaign": true,
+        "campaign_end": "2026-11-27",
+        "trend_score": 57.5,
+        "demand_matches": 0
+      },
+      {
+        "name": "Mic Wireless Clip On Dual Lavalier Q8 (Komisi 13%)",
+        "category": "Podcast & Konten",
+        "commission": "13%",
+        "url": "https://s.shopee.co.id/AAIwqYWjPY",
+        "is_campaign": false,
+        "campaign_end": null,
+        "trend_score": 46.5,
+        "demand_matches": 5
+      }
+    ]
+  },
+  "links": {
+    "public_dashboard": "https://adiprast13-ship-it.github.io/anada-store-katalog/dashboard.html",
+    "microsite_katalog": "https://adiprast13-ship-it.github.io/anada-store-katalog/",
+    "youtube_channel": "https://www.youtube.com/@AnadaStore",
+    "shopee_wardah_campaign": "https://s.shopee.co.id/4VeaCnAfLI"
+  }
+}
