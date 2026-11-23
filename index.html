@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anada Store — Katalog Rekomendasi Pilihan</title>
+  <meta name="description" content="Katalog produk pilihan resmi dari channel YouTube @AnadaStore — buku produktivitas, aksesoris laptop & AI, peralatan podcast, dan perlengkapan harian di Shopee." />
+  <style>
+    :root {
+      --bg: #0d1016;
+      --card: #151a23;
+      --border: #242c3b;
+      --text: #f3f5f8;
+      --muted: #98a4b8;
+      --lime: #d7ff3f;
+      --shopee: #ee4d2d;
+      --shopee-hover: #ff5e3d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: radial-gradient(circle at top, #17202e 0%, var(--bg) 52%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 16px 56px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(215, 255, 63, 0.12);
+      border: 1px solid rgba(215, 255, 63, 0.35);
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    h1 span { color: var(--lime); }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 500px;
+      margin: 0 auto 16px;
+    }
+    .yt-link {
+      display: inline-block;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .yt-link:hover { border-color: var(--lime); color: var(--lime); }
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .search {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+    }
+    .search:focus { border-color: var(--lime); }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      white-space: nowrap;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+    .tab.active, .tab:hover {
+      background: var(--lime);
+      color: #0d1016;
+      border-color: var(--lime);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(215, 255, 63, 0.45);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .cat-pill {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--lime);
+      background: rgba(215, 255, 63, 0.1);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .xtra-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffb399;
+      background: rgba(238, 77, 45, 0.18);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .card p {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 4px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--shopee);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .cta:hover { background: var(--shopee-hover); }
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 36px 16px;
+      border: 1px dashed var(--border);
+      border-radius: 16px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="badge">✦ KATALOG RESMI AFFILIATE SHOPEE</div>
+      <h1>Anada <span>Store</span></h1>
+      <p class="subtitle">Semua produk pilihan yang dibahas di YouTube Shorts &amp; Podcast <strong>@AnadaStore</strong> — klik langsung menuju toko resmi Shopee.</p>
+      <a class="yt-link" href="https://www.youtube.com/@AnadaStore" target="_blank" rel="noopener">▶ Kunjungi YouTube @AnadaStore</a>
+    </header>
+
+    <div class="controls">
+      <input id="search" class="search" type="search" placeholder="Cari produk (misal: Atomic Habits, stand laptop, mic, tumbler)..." />
+      <div id="tabs" class="tabs"></div>
+    </div>
+
+    <main id="grid" class="grid"></main>
+
+    <footer>
+      Dikelola otomatis oleh UKI Shōten Virtual Office • Tautan di halaman ini adalah link afiliasi Shopee resmi.
+    </footer>
+  </div>
+
+  <script>
+    let allProducts = [];
+    let activeCategory = 'Semua';
+
+    async function init() {
+      const res = await fetch('./catalog.json?v=' + Date.now());
+      const data = await res.json();
+      allProducts = data.products || [];
+      renderTabs();
+      renderGrid();
+      document.getElementById('search').addEventListener('input', renderGrid);
+    }
+
+    function renderTabs() {
+      const cats = ['Semua', ...new Set(allProducts.map(p => p.category || 'Pilihan'))];
+      const tabsEl = document.getElementById('tabs');
+      tabsEl.innerHTML = cats.map(c =>
+        `<button class="tab ${c === activeCategory ? 'active' : ''}" data-cat="${c}">${c}</button>`
+      ).join('');
+      tabsEl.querySelectorAll('.tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          renderTabs();
+          renderGrid();
+        });
+      });
+    }
+
+    function renderGrid() {
+      const q = (document.getElementById('search').value || '').trim().toLowerCase();
+      const filtered = allProducts.filter(p => {
+        const matchCat = activeCategory === 'Semua' || (p.category || 'Pilihan') === activeCategory;
+        const blob = `${p.name} ${p.description || ''} ${(p.keywords || []).join(' ')}`.toLowerCase();
+        const matchQ = !q || blob.includes(q);
+        return matchCat && matchQ;
+      });
+
+      const grid = document.getElementById('grid');
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="empty">Produk tidak ditemukan. Coba kata kunci lain.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <article class="card">
+          <div class="card-top">
+            <span class="cat-pill">${p.category || 'Pilihan'}</span>
+            ${p.badge ? `<span class="xtra-pill">${p.badge}</span>` : ''}
+          </div>
+          <h2>${p.name}</h2>
+          <p>${p.description || ''}</p>
+          <a class="cta" href="${p.url}" target="_blank" rel="noopener noreferrer">🛒 Cek Harga &amp; Beli di Shopee →</a>
+        </article>
+      `).join('');
+    }
+
+    init();
+  </script>
+</body>
+</html>
