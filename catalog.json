@@ -31,7 +31,14 @@
       "name": "Buku Atomic Habits — James Clear",
       "description": "Panduan praktis membangun kebiasaan kecil yang berdampak besar untuk fokus, produktivitas, dan kesehatan mental.",
       "url": "https://s.shopee.co.id/50aqgnsKIs",
-      "keywords": ["otak", "fokus", "produktivitas", "kebiasaan", "belajar", "buku"]
+      "keywords": [
+        "otak",
+        "fokus",
+        "produktivitas",
+        "kebiasaan",
+        "belajar",
+        "buku"
+      ]
     },
     {
       "id": "laptop_ai",
@@ -44,7 +51,14 @@
       "name": "MILIFE Stand Laptop Aluminium Portable Foldable",
       "description": "Dudukan laptop & tablet aluminium kokoh dan bisa dilipat — bikin setup kerja, coding, dan produktivitas AI makin ergonomis.",
       "url": "https://s.shopee.co.id/Lp18HPn98",
-      "keywords": ["ai", "laptop", "coding", "kerja", "stand", "meja"]
+      "keywords": [
+        "ai",
+        "laptop",
+        "coding",
+        "kerja",
+        "stand",
+        "meja"
+      ]
     },
     {
       "id": "podcast_konten",
@@ -57,7 +71,14 @@
       "name": "Cantiklife Q8 Mic Wireless Clip On Dual Lavalier",
       "description": "Mikrofon wireless plug & play (Type-C & iOS) lengkap dengan charging case untuk rekaman podcast, YouTube Shorts, dan live streaming.",
       "url": "https://s.shopee.co.id/AAIwqYWjPY",
-      "keywords": ["podcast", "mic", "konten", "youtube", "shorts", "rekam"]
+      "keywords": [
+        "podcast",
+        "mic",
+        "konten",
+        "youtube",
+        "shorts",
+        "rekam"
+      ]
     },
     {
       "id": "bisnis_umkm",
@@ -70,7 +91,14 @@
       "name": "Buku The Psychology of Money (Edisi Revisi) — Morgan Housel",
       "description": "Pelajaran abadi tentang pola pikir keuangan, bisnis, dan keputusan finansial yang lebih tenang dan terukur.",
       "url": "https://s.shopee.co.id/8fU93pxHyo",
-      "keywords": ["bisnis", "umkm", "uang", "keuangan", "finansial", "buku"]
+      "keywords": [
+        "bisnis",
+        "umkm",
+        "uang",
+        "keuangan",
+        "finansial",
+        "buku"
+      ]
     },
     {
       "id": "kopi_olahraga",
@@ -83,7 +111,110 @@
       "name": "CIVAGO Tumbler Stainless Vakum Panas & Dingin",
       "description": "Tumbler baja tahan karat berinsulasi vakum mulut lebar — menjaga kopi hangat atau air dingin lebih lama saat kerja maupun olahraga.",
       "url": "https://s.shopee.co.id/70Lv4oFXm2",
-      "keywords": ["kopi", "olahraga", "lari", "tumbler", "minum", "kesehatan"]
+      "keywords": [
+        "kopi",
+        "olahraga",
+        "lari",
+        "tumbler",
+        "minum",
+        "kesehatan"
+      ]
+    },
+    {
+      "id": "campaign_wardah_mall",
+      "category": "Campaign & Promo",
+      "icon": "✨",
+      "accent": "#f472b6",
+      "price": "Brand Day 22–27 Nov",
+      "sold": "Shopee Mall",
+      "badge": "Brand Day • Komisi XTRA 15%",
+      "commission": "15% (Brand Day Paragon)",
+      "name": "Wardah Official Shop — Brand Day Paragon",
+      "description": "Promo resmi Brand Day Paragon (22–27 Nov) di Shopee Mall: skincare, sunscreen, dan makeup original Wardah dengan ekstra diskon.",
+      "url": "https://s.shopee.co.id/3B9CWaQrLe",
+      "keywords": [
+        "wardah",
+        "skincare",
+        "sunscreen",
+        "makeup",
+        "perawatan",
+        "paragon",
+        "cantik",
+        "kulit",
+        "promo",
+        "brand day"
+      ]
+    },
+    {
+      "id": "campaign_wardah_spray",
+      "category": "Campaign & Promo",
+      "icon": "🧴",
+      "accent": "#fb7185",
+      "price": "Rp 87.220",
+      "sold": "10RB+ Terjual",
+      "badge": "Brand Day • 10RB+ Terjual",
+      "commission": "15% (Komisi XTRA)",
+      "name": "Wardah Longwear Skin-Setter Setting Spray Colorfit 80ml",
+      "description": "Setting spray unggulan Brand Day Paragon: tahan hingga 24 jam, transferproof & oil-control untuk aktivitas seharian.",
+      "url": "https://s.shopee.co.id/114hwlW6FO",
+      "keywords": [
+        "wardah",
+        "setting spray",
+        "makeup",
+        "skincare",
+        "tahan lama",
+        "glowing",
+        "perawatan"
+      ]
+    },
+    {
+      "id": "campaign_phoenix_gadget",
+      "category": "Campaign & Promo",
+      "icon": "⚡",
+      "accent": "#38bdf8",
+      "price": "Mulai Rp 1.000",
+      "sold": "Star Seller • 1RB+",
+      "badge": "Komisi XTRA s.d. 80%",
+      "commission": "s.d. 80% (Komisi XTRA)",
+      "name": "PHOENIX PHONE — Aksesoris HP & Fast Charging",
+      "description": "Toko Star Seller pilihan Komisi XTRA: kabel data fast charging, speaker Bluetooth portable, dan aksesoris gadget harian.",
+      "url": "https://s.shopee.co.id/5VX7Iuib9a",
+      "keywords": [
+        "hp",
+        "handphone",
+        "charger",
+        "kabel",
+        "fast charging",
+        "gadget",
+        "elektronik",
+        "speaker",
+        "teknologi"
+      ]
+    },
+    {
+      "id": "campaign_mihyaz_books",
+      "category": "Campaign & Promo",
+      "icon": "📚",
+      "accent": "#d7ff3f",
+      "price": "Promo Buku",
+      "sold": "Komisi XTRA",
+      "badge": "Komisi XTRA s.d. 80%",
+      "commission": "s.d. 80% (Komisi XTRA)",
+      "name": "MIHYAZ BOOK STORE — Koleksi Buku Sejarah & Pemikiran",
+      "description": "Koleksi buku sejarah, filsafat, pemikiran Islam, dan wawasan sosial-politik Indonesia dengan penawaran Komisi XTRA.",
+      "url": "https://s.shopee.co.id/2La5X6g1Fo",
+      "keywords": [
+        "buku",
+        "sejarah",
+        "filsafat",
+        "baca",
+        "literasi",
+        "ilmu",
+        "wawasan",
+        "pemikiran",
+        "edukasi",
+        "kuliah"
+      ]
     }
   ]
 }
