@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Virtual Office UKI Shoten & Kondisi Sistem</title>
+    <meta name="description" content="Dashboard Real-Time Perangkat Linux, Rangkaian Tugas Agen, Saran Konten, dan Model AI UKI Shoten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --card-bg: rgba(17, 24, 39, 0.75);
+            --border: rgba(255, 255, 255, 0.08);
+            --accent-lime: #d7ff3f;
+            --accent-cyan: #38bdf8;
+            --accent-purple: #a78bfa;
+            --accent-pink: #f472b6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: radial-gradient(circle at top left, #0f172a 0%, #0a0e17 100%);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 24px 16px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1280px; margin: 0 auto; }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        .header-title h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+        .header-title h1 span { color: var(--accent-lime); }
+        .header-title p { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+        .nav-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-btn {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--border);
+            color: #f1f5f9;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { background: rgba(56,189,248,0.2); border-color: var(--accent-cyan); color: var(--accent-cyan); }
+        .nav-btn.primary { background: var(--accent-lime); color: #000; border-color: var(--accent-lime); }
+        
+        /* Grid Layouts */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 20px; margin-bottom: 24px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .card-header h3 { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .badge-lime { background: rgba(215,255,63,0.15); color: var(--accent-lime); }
+        .badge-cyan { background: rgba(56,189,248,0.15); color: var(--accent-cyan); }
+        .badge-pink { background: rgba(244,114,182,0.15); color: var(--accent-pink); }
+
+        /* Stat numbers */
+        .stat-value { font-size: 28px; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+        .stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress-fill { height: 100%; border-radius: 4px; }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { padding: 10px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0 10px;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        .footer a { color: var(--accent-cyan); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-title">
+                <h1>UKI SHŌTEN <span>DASHBOARD</span></h1>
+                <p>Status Perangkat Linux • Rangkaian Tugas Agen • Kurasi Konten • Otak Model AI • Terakhir Update: <b>2026-11-23 14:02:37 WIB</b></p>
+            </div>
+            <div class="nav-pills">
+                <a href="https://adiprast13-ship-it.github.io/anada-store-katalog/" class="nav-btn primary" target="_blank">🛒 Katalog Microsite</a>
+                <a href="https://www.youtube.com/@AnadaStore" class="nav-btn" target="_blank">▶️ YouTube @AnadaStore</a>
+                <a href="https://s.shopee.co.id/4VeaCnAfLI" class="nav-btn" target="_blank">✨ Shopee Campaign</a>
+                <button onclick="location.reload()" class="nav-btn" style="cursor: pointer;">🔄 Refresh</button>
+            </div>
+        </header>
+
+        <!-- SECTION 1: KONDISI PERANGKAT LINUX -->
+        <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <h2 style="font-size: 18px; font-weight: 800; color: #f8fafc;">💻 1. Kondisi Perangkat Linux (Host Node)</h2>
+            <span style="font-size: 12px; color: var(--accent-cyan); font-family: monospace;">Host: Apex-UKI-Core • IP: 192.168.1.37</span>
+        </div>
+        
+        <div class="grid-4">
+            <!-- BATERAI -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🔋 Baterai Laptop</h3>
+                    <span class="badge badge-lime">Charging</span>
+                </div>
+                <div class="stat-value" style="color: var(--accent-lime);">93%</div>
+                <div class="stat-sub">Sedang Mengisi Daya (AC Adaptor)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 93%; background: var(--accent-lime);"></div>
+                </div>
+            </div>
+
+            <!-- SUHU LAPTOP -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🌡️ Suhu & Thermal</h3>
+                    <span class="badge badge-cyan">Hangat (Wajar)</span>
+                </div>
+                <div class="stat-value" style="color: #f87171;">79.0°C</div>
+                <div class="stat-sub">CPU Package Sensor • Uptime: 2.9 Jam</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 79%; background: #f87171;"></div>
+                </div>
+            </div>
+
+            <!-- RAM -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🧠 RAM (Memori)</h3>
+                    <span class="badge badge-cyan">92.0% Terpakai</span>
+                </div>
+                <div class="stat-value">6.89 <span style="font-size: 16px; color: var(--text-muted);">/ 7.49 GB</span></div>
+                <div class="stat-sub">Sisa Bebas: <b>0.6 GB</b> (Optimal untuk AI)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 92.0%; background: var(--accent-purple);"></div>
+                </div>
+            </div>
+
+            <!-- ROM / DISK -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>💾 ROM / Disk Storage</h3>
+                    <span class="badge badge-lime">33.8% Terpakai</span>
+                </div>
+                <div class="stat-value">78.7 <span style="font-size: 16px; color: var(--text-muted);">/ 233.2 GB</span></div>
+                <div class="stat-sub">Kapasitas Bebas: <b>142.5 GB</b> (Sangat Lega)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 33.8%; background: var(--accent-lime);"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADDITIONAL SYSTEM STATS BAR -->
+        <div class="card" style="margin-bottom: 24px; padding: 14px 20px; background: rgba(30,41,59,0.5);">
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; font-size: 13px;">
+                <div>🌐 <b>Koneksi:</b> <span style="color: #34d399;">● Online (Terhubung)</span></div>
+                <div>⚡ <b>CPU Load Average:</b> <code>1m: 17.69</code> • <code>5m: 11.66</code> • <code>15m: 8.04</code> (4 Cores)</div>
+                <div>📡 <b>Akses Jaringan Lokal (WiFi):</b> <a href="http://192.168.1.37:5173" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">http://192.168.1.37:5173</a></div>
+            </div>
+        </div>
+
+        <!-- SECTION 2 & 4: TUGAS AGENT & MODEL AI -->
+        <div class="grid-2">
+            <!-- RANGKAIAN TUGAS AGENT -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>📋 2. Rangkaian Tugas Agen UKI Virtual Office</h3>
+                    <span class="badge badge-lime">29 Selesai / 51 Total</span>
+                </div>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Daftar tugas yang dikerjakan secara otonom oleh agen (Uki, Karasu, Hikari, Sora, Suara):</p>
+                
+                <div style="overflow-x: auto; max-height: 400px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Agen</th>
+                                <th>Judul Tugas</th>
+                                <th style="text-align: center;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#105</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">UKI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">buat 1 faceless video mengenai cara prompting yang benar.</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #fbbf24; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">RUNNING</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#104</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">KARASU</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">Edit Video Lama @AnadaStore & Sisipkan Link Shopee Affiliate Wardah</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">DONE</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#103</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">FUMI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">cek ulang gdrrive</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#102</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">FUMI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">cek ulang gdrrive</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#101</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">FUMI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">cek ulang gdrrive</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#100</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">HIKARI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">Saya ingin upload hasil clip dari video ini</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#99</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">HIKARI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">Tolong kirim video hasil clip hari ini kesini</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">DONE</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#98</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">KARASU</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">Buka blokir, owner ingin video diupload semua</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#97</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">KURO</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">semua hasil klip dan kode project mya</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">DONE</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#96</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">HIKARI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">hasil clip</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">DONE</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#95</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">KARASU</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">referensi editing https://youtube.com/shorts/PjmQnDWU8pY?si=8kRAW7Xb0f7Afb1x</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #a78bfa;">#94</td>
+            <td style="padding: 10px;"><span style="background: rgba(167,139,250,0.15); color: #c4b5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">UKI</span></td>
+            <td style="padding: 10px; color: #f1f5f9; font-size: 13px;">bisakah aku menambah aturan atau memberi referensi untuk editing konten baru</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #60a5fa; font-weight: bold; font-size: 11px; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 12px;">BLOCKED</span></td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MODEL AI YANG SEDANG DIGUNAKAN -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🤖 4. Model AI yang Sedang Digunakan</h3>
+                    <span class="badge badge-lime">● ONLINE</span>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(215,255,63,0.2); border-radius: 10px; padding: 14px; margin-bottom: 16px;">
+                    <div style="font-size: 12px; color: var(--accent-lime); font-weight: bold;">OTAK UTAMA (BRAIN PROVIDER):</div>
+                    <div style="font-size: 18px; font-weight: 800; font-family: monospace; color: #fff; margin: 4px 0;">hermes (gemini-4-neon-high)</div>
+                    <div style="font-size: 12px; color: var(--text-muted);">Mode Operasi: <b>api_server</b> • Provider: <b>HERMES</b></div>
+                </div>
+
+                <h4 style="font-size: 13px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase;">Spesialisasi Model Per Agen:</h4>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Agen</th>
+                                <th>Fungsi & Peran</th>
+                                <th>Model AI Ditugaskan</th>
+                                <th style="text-align: center;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">UKI</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Koordinator & Pengambil Keputusan</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Hermes Brain (gemini-4-neon-high)</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">AKTIF</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">KARASU</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Distribusi Sosmed & YouTube Data API</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Claude Sonnet 5.5 / Hermes API</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">AKTIF</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">HIKARI</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Riset Ide Konten & Kurasi Viral</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Gemini 3.8 Flash High Speed</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">AKTIF</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">SUARA</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Voice Synthesis & Audio Engineer</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Piper TTS Indonesian Natural AI</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">LOKAL</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">TAKA</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Desain Thumbnail & Visual Prompt</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Pillow / OpenCV Smart Reframe</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">LOKAL</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">SORA</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Penjadwalan Otomatis Jam WIB</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Watchdog Scheduler (12:00, 17:30, 19:30)</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">AKTIF</span></td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <td style="padding: 10px; font-weight: bold; color: #d7ff3f;">HATO</td>
+            <td style="padding: 10px; color: #cbd5e1; font-size: 12px;">Liaison Bot & Notifikasi Telegram</td>
+            <td style="padding: 10px; color: #38bdf8; font-size: 12px; font-family: monospace;">Telegram Bot API Daemon (ID: 6299101281)</td>
+            <td style="padding: 10px; text-align: center;"><span style="color: #34d399; font-weight: bold; font-size: 11px; background: rgba(52,211,153,0.12); padding: 3px 8px; border-radius: 8px;">AKTIF</span></td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: SARAN VIDEO CLIPPING & FACELESS -->
+        <div style="margin-bottom: 12px;">
+            <h2 style="font-size: 18px; font-weight: 800; color: #f8fafc;">💡 3. Saran Video Clipping & Konten Faceless (Studio Maliki)</h2>
+            <p style="font-size: 13px; color: var(--text-muted);">Rekomendasi video panjang viral untuk di-clip dan ide naskah faceless berkonversi tinggi ke etalase Shopee:</p>
+        </div>
+
+        <div class="grid-2">
+            <!-- SARAN CLIPPING -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="color: var(--accent-cyan);">✂️ Rekomendasi Video Clipping (Long-to-Short)</h3>
+                    <span class="badge badge-cyan">4 Topik Siap Eksekusi</span>
+                </div>
+                
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(56,189,248,0.2); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #38bdf8; font-size: 15px;">🎬 Dokter Bedah Saraf Bongkar Fakta Menakjubkan Otak Manusia</h4>
+                <span style="background: rgba(215,255,63,0.15); color: #d7ff3f; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">Rekomendasi Siap Potong</span>
+            </div>
+            <p style="margin: 8px 0 6px 0; color: #94a3b8; font-size: 12px;"><b>Sumber:</b> KPODS / Dr. Ryu Hasan • <b>Hook Pembuka:</b> <i style="color: #f8fafc;">'Tahu nggak kenapa otak lu gampang capek pas kerja depan laptop?'</i></p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px; line-height: 1.4;">Topik neurosains & fokus kerja memiliki retensi 85%+ di YouTube Shorts; relevan langsung dengan Buku Atomic Habits di etalase Shopee.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #f472b6;">🛍️ Target Shopee: <b>Buku Atomic Habits — James Clear (Komisi XTRA)</b></span>
+                <a href="https://s.shopee.co.id/50aqgnsKIs" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Link Shopee →</a>
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(56,189,248,0.2); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #38bdf8; font-size: 15px;">🎬 Teguh Aprianto: Rahasia Hacker Menggeser Satelit & Bobol Rekening</h4>
+                <span style="background: rgba(215,255,63,0.15); color: #d7ff3f; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">Rekomendasi Siap Potong</span>
+            </div>
+            <p style="margin: 8px 0 6px 0; color: #94a3b8; font-size: 12px;"><b>Sumber:</b> Podcast Teguh Aprianto • <b>Hook Pembuka:</b> <i style="color: #f8fafc;">'Hacker bisa geser satelit luar angkasa cuma pakai laptop biasa?!'</i></p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px; line-height: 1.4;">Topik cybersecurity & tech digemari audiens muda/mahasiswa IT; mengonversi penjualan stand laptop aluminium & aksesoris fast-charging.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #f472b6;">🛍️ Target Shopee: <b>MILIFE Stand Laptop Aluminium Foldable & Kabel Fast Charging</b></span>
+                <a href="https://s.shopee.co.id/Lp18HPn98" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Link Shopee →</a>
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(56,189,248,0.2); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #38bdf8; font-size: 15px;">🎬 Nadia Omara: Analisis Kisah Misteri & Kasus Viral Terbesar</h4>
+                <span style="background: rgba(215,255,63,0.15); color: #d7ff3f; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">Rekomendasi Siap Potong</span>
+            </div>
+            <p style="margin: 8px 0 6px 0; color: #94a3b8; font-size: 12px;"><b>Sumber:</b> KHW Nadia Omara • <b>Hook Pembuka:</b> <i style="color: #f8fafc;">'Kisah ini awalnya dikira mitos, sampai akhirnya polisi nemuin bukti ini...'</i></p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px; line-height: 1.4;">Basis audiens perempuan & cerita storytelling sangat luas, cocok disisipkan promo skincare Brand Day Paragon Wardah.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #f472b6;">🛍️ Target Shopee: <b>Wardah Official Shop — Brand Day Paragon (Komisi XTRA 15%)</b></span>
+                <a href="https://s.shopee.co.id/4VeaCnAfLI" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Link Shopee →</a>
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(56,189,248,0.2); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #38bdf8; font-size: 15px;">🎬 Dokter Tirta: Arab Lari 5K & Mitos Ngopi Sebelum Olahraga</h4>
+                <span style="background: rgba(215,255,63,0.15); color: #d7ff3f; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">Rekomendasi Siap Potong</span>
+            </div>
+            <p style="margin: 8px 0 6px 0; color: #94a3b8; font-size: 12px;"><b>Sumber:</b> Podcast Dr. Tirta • <b>Hook Pembuka:</b> <i style="color: #f8fafc;">'Bolehkah lu ngopi sebelum lari pagi? Dengerin penjelasan medisnya!'</i></p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px; line-height: 1.4;">Komunitas pelari & olahraga sedang booming di Indonesia; penjualan tumbler CIVAGO & perlengkapan hidrasi melonjak.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #f472b6;">🛍️ Target Shopee: <b>CIVAGO Tumbler Stainless Vakum Panas/Dingin (Komisi XTRA 18%)</b></span>
+                <a href="https://s.shopee.co.id/70Lv4oFXm2" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Link Shopee →</a>
+            </div>
+        </div>
+        
+            </div>
+
+            <!-- SARAN FACELESS -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="color: var(--accent-pink);">🎭 Ide Konten Faceless (Studio Maliki)</h3>
+                    <span class="badge badge-pink">Format Otomatis 9:16</span>
+                </div>
+                
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(244,114,182,0.25); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #f472b6; font-size: 15px;">🎭 3 Script Python Otomasi yang Bikin Laptop Kerja Sendiri Pas Kamu Tidur</h4>
+                <span style="background: rgba(244,114,182,0.15); color: #f472b6; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px;">⏱️ 48 detik</span>
+            </div>
+            <p style="margin: 8px 0 4px 0; color: #d7ff3f; font-size: 12px;"><b>Hook 3 Detik:</b> 'Stop kerja lembur ngetik laporan manual! Ini cara bikin laptop kerja sendiri.'</p>
+            <p style="margin: 4px 0; color: #94a3b8; font-size: 12px;"><b>Format Engine:</b> Studio Maliki — Motion Code Flow (reels-t06) (Dark terminal matrix, clean neon syntax highlighting, smooth pan)</p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px;"><b>Call-To-Action:</b> Link script & stand laptop ergonomis ada di bio katalog @AnadaStore</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #fbbf24;">📦 Produk Terkait: <b>MILIFE Stand Laptop Aluminium Portable</b></span>
+                <a href="https://s.shopee.co.id/Lp18HPn98" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Shopee →</a>
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(244,114,182,0.25); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #f472b6; font-size: 15px;">🎭 Psikologi Uang: Kenapa Gaji Naik Tapi Tabungan Tetap Nol?</h4>
+                <span style="background: rgba(244,114,182,0.15); color: #f472b6; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px;">⏱️ 55 detik</span>
+            </div>
+            <p style="margin: 8px 0 4px 0; color: #d7ff3f; font-size: 12px;"><b>Hook 3 Detik:</b> 'Orang kaya bukan yang gajinya paling gede, tapi yang ngerti aturan 1 ini.'</p>
+            <p style="margin: 4px 0; color: #94a3b8; font-size: 12px;"><b>Format Engine:</b> Studio Maliki — Infographic Minimalist Aesthetic (Grafik finansial bergerak, visual uang & waktu, tipografi elegan)</p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px;"><b>Call-To-Action:</b> Buku The Psychology of Money lagi promo di katalog etalase kita!</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #fbbf24;">📦 Produk Terkait: <b>Buku The Psychology of Money — Morgan Housel</b></span>
+                <a href="https://s.shopee.co.id/8fU93pxHyo" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Shopee →</a>
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(244,114,182,0.25); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h4 style="margin: 0; color: #f472b6; font-size: 15px;">🎭 Aturan 2 Menit: Cara Menghancurkan Prokrastinasi Selamanya</h4>
+                <span style="background: rgba(244,114,182,0.15); color: #f472b6; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 6px;">⏱️ 42 detik</span>
+            </div>
+            <p style="margin: 8px 0 4px 0; color: #d7ff3f; font-size: 12px;"><b>Hook 3 Detik:</b> 'Kalau ada tugas yang bisa selesai dalam 2 menit, lakukan SEKARANG.'</p>
+            <p style="margin: 4px 0; color: #94a3b8; font-size: 12px;"><b>Format Engine:</b> Studio Maliki — Kinetic Typography Focus (Stopwatch animasi, countdown beat, kontras tinggi kuning-hitam)</p>
+            <p style="margin: 4px 0 10px 0; color: #cbd5e1; font-size: 12px;"><b>Call-To-Action:</b> Cek buku Atomic Habits di link deskripsi untuk panduan lengkapnya!</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; font-size: 12px;">
+                <span style="color: #fbbf24;">📦 Produk Terkait: <b>Buku Atomic Habits (Komisi XTRA)</b></span>
+                <a href="https://s.shopee.co.id/50aqgnsKIs" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 11px;">Buka Shopee →</a>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p><b>UKI Shōten Virtual Office Engine v2.0</b> • Terhubung ke <a href="https://www.youtube.com/@AnadaStore" target="_blank">YouTube @AnadaStore</a> & <a href="https://adiprast13-ship-it.github.io/anada-store-katalog/" target="_blank">Shopee Affiliate Microsite</a></p>
+            <p style="margin-top: 6px; font-size: 11px; opacity: 0.7;">URL Publik Dashboard (Dapat Dibuka Siapapun): <a href="https://adiprast13-ship-it.github.io/anada-store-katalog/dashboard.html" target="_blank">https://adiprast13-ship-it.github.io/anada-store-katalog/dashboard.html</a></p>
+        </footer>
+    </div>
+</body>
+</html>
