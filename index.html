@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anada Store — Katalog Rekomendasi Pilihan</title>
-  <meta name="description" content="Katalog produk pilihan resmi dari channel YouTube @AnadaStore — buku produktivitas, aksesoris laptop & AI, peralatan podcast, dan perlengkapan harian di Shopee." />
+  <title>Anada Store — Microsite Katalog Produk Pilihan @AnadaStore</title>
+  <meta name="description" content="Katalog produk rekomendasi resmi YouTube @AnadaStore — buku produktivitas, aksesoris laptop & AI, mikrofon podcast, bisnis, dan perlengkapan harian di Shopee." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anada Store — Katalog Produk Pilihan @AnadaStore" />
+  <meta property="og:description" content="Temukan semua produk yang dibahas di YouTube Shorts @AnadaStore. Klik langsung menuju toko resmi Shopee." />
+  <meta property="og:url" content="https://adiprast13-ship-it.github.io/anada-store-katalog/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root {
       --bg: #0d1016;
@@ -24,189 +29,98 @@
       min-height: 100vh;
       line-height: 1.5;
     }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 28px 16px 56px;
-    }
-    .hero {
-      text-align: center;
-      margin-bottom: 24px;
-    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 28px 16px 56px; }
+    .hero { text-align: center; margin-bottom: 24px; }
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 999px;
       background: rgba(215, 255, 63, 0.12);
       border: 1px solid rgba(215, 255, 63, 0.35);
-      color: var(--lime);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-      margin-bottom: 12px;
+      color: var(--lime); font-size: 12px; font-weight: 700; margin-bottom: 12px;
     }
-    h1 {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
+    h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
     h1 span { color: var(--lime); }
-    .subtitle {
-      color: var(--muted);
-      font-size: 14px;
-      max-width: 500px;
-      margin: 0 auto 16px;
-    }
+    .subtitle { color: var(--muted); font-size: 14px; max-width: 520px; margin: 0 auto 16px; }
     .yt-link {
-      display: inline-block;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border);
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
+      display: inline-block; color: #fff; background: rgba(255, 0, 0, 0.18);
+      border: 1px solid rgba(255, 70, 70, 0.45);
+      padding: 7px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none;
     }
-    .yt-link:hover { border-color: var(--lime); color: var(--lime); }
-    .controls {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
+    .yt-link:hover { background: rgba(255, 0, 0, 0.32); }
+    .controls { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
     .search {
-      width: 100%;
-      padding: 13px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      font-size: 15px;
-      outline: none;
+      width: 100%; padding: 13px 16px; border-radius: 14px;
+      border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 15px; outline: none;
     }
     .search:focus { border-color: var(--lime); }
-    .tabs {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: none;
-    }
+    .tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
     .tabs::-webkit-scrollbar { display: none; }
     .tab {
-      white-space: nowrap;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.15s ease;
+      white-space: nowrap; padding: 8px 14px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--card); color: var(--muted);
+      font-size: 13px; font-weight: 600; cursor: pointer;
     }
-    .tab.active, .tab:hover {
-      background: var(--lime);
-      color: #0d1016;
-      border-color: var(--lime);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
+    .tab.active, .tab:hover { background: var(--lime); color: #0d1016; border-color: var(--lime); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 16px; display: flex; gap: 14px; align-items: stretch;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(215, 255, 63, 0.45);
+    .card:hover { transform: translateY(-2px); border-color: rgba(215, 255, 63, 0.45); }
+    .thumb-box {
+      flex: 0 0 84px; height: 84px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
     }
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
+    .card-body { flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .card-top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
     .cat-pill {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--lime);
-      background: rgba(215, 255, 63, 0.1);
-      padding: 4px 10px;
-      border-radius: 999px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      color: var(--lime); background: rgba(215, 255, 63, 0.1); padding: 3px 9px; border-radius: 999px;
     }
     .xtra-pill {
-      font-size: 11px;
-      font-weight: 700;
-      color: #ffb399;
-      background: rgba(238, 77, 45, 0.18);
-      padding: 4px 10px;
-      border-radius: 999px;
+      font-size: 11px; font-weight: 700; color: #ffb399;
+      background: rgba(238, 77, 45, 0.18); padding: 3px 9px; border-radius: 999px;
     }
-    .card h2 {
-      font-size: 17px;
-      font-weight: 700;
-      color: #fff;
-    }
-    .card p {
-      font-size: 13.5px;
-      color: var(--muted);
-    }
+    .meta-row { display: flex; gap: 10px; font-size: 12.5px; color: var(--lime); font-weight: 700; }
+    .meta-row span.sold { color: var(--muted); font-weight: 500; }
+    .card h2 { font-size: 16.5px; font-weight: 700; color: #fff; }
+    .card p { font-size: 13px; color: var(--muted); }
     .cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      margin-top: 4px;
-      padding: 12px 16px;
-      border-radius: 12px;
-      background: var(--shopee);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.15s ease;
+      display: inline-flex; justify-content: center; align-items: center; gap: 6px;
+      width: 100%; margin-top: 6px; padding: 11px 14px; border-radius: 12px;
+      background: var(--shopee); color: #fff; font-size: 14px; font-weight: 700; text-decoration: none;
     }
     .cta:hover { background: var(--shopee-hover); }
-    .empty {
-      text-align: center;
-      color: var(--muted);
-      padding: 36px 16px;
-      border: 1px dashed var(--border);
-      border-radius: 16px;
+    .section-title {
+      font-size: 16px; font-weight: 800; margin: 30px 0 12px; display: flex; align-items: center; gap: 8px;
     }
+    .shorts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+    .short-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column;
+    }
+    .short-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+    .short-card div { padding: 10px 12px; font-size: 13px; font-weight: 600; }
+    .empty { text-align: center; color: var(--muted); padding: 36px 16px; border: 1px dashed var(--border); border-radius: 16px; }
     footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
+      text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px;
+      padding-top: 16px; border-top: 1px solid var(--border);
+    }
+    @media (max-width: 480px) {
+      .card { flex-direction: column; }
+      .thumb-box { width: 100%; height: 68px; flex: none; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
-      <div class="badge">✦ KATALOG RESMI AFFILIATE SHOPEE</div>
+      <div class="badge">✦ MICROSITE RESMI AFFILIATE SHOPEE</div>
       <h1>Anada <span>Store</span></h1>
       <p class="subtitle">Semua produk pilihan yang dibahas di YouTube Shorts &amp; Podcast <strong>@AnadaStore</strong> — klik langsung menuju toko resmi Shopee.</p>
-      <a class="yt-link" href="https://www.youtube.com/@AnadaStore" target="_blank" rel="noopener">▶ Kunjungi YouTube @AnadaStore</a>
+      <a class="yt-link" href="https://www.youtube.com/@AnadaStore" target="_blank" rel="noopener">▶ Subscribe YouTube @AnadaStore</a>
     </header>
 
     <div class="controls">
@@ -216,8 +130,14 @@
 
     <main id="grid" class="grid"></main>
 
+    <section id="shorts-section" style="display:none;">
+      <h3 class="section-title">🎬 Video YouTube Shorts Terbaru @AnadaStore</h3>
+      <div id="shorts-grid" class="shorts-grid"></div>
+    </section>
+
     <footer>
-      Dikelola otomatis oleh UKI Shōten Virtual Office • Tautan di halaman ini adalah link afiliasi Shopee resmi.
+      <strong>Transparansi Afiliasi:</strong> Tautan produk di halaman ini adalah link afiliasi resmi Shopee Indonesia. Jika Anda berbelanja melalui tautan ini, kami dapat menerima komisi kecil tanpa biaya tambahan bagi Anda.<br />
+      Dikelola otomatis oleh UKI Shōten Virtual Office.
     </footer>
   </div>
 
@@ -231,6 +151,7 @@
       allProducts = data.products || [];
       renderTabs();
       renderGrid();
+      renderShorts(data.featured_shorts || []);
       document.getElementById('search').addEventListener('input', renderGrid);
     }
 
@@ -257,23 +178,36 @@
         const matchQ = !q || blob.includes(q);
         return matchCat && matchQ;
       });
-
       const grid = document.getElementById('grid');
       if (!filtered.length) {
         grid.innerHTML = `<div class="empty">Produk tidak ditemukan. Coba kata kunci lain.</div>`;
         return;
       }
-
       grid.innerHTML = filtered.map(p => `
         <article class="card">
-          <div class="card-top">
-            <span class="cat-pill">${p.category || 'Pilihan'}</span>
-            ${p.badge ? `<span class="xtra-pill">${p.badge}</span>` : ''}
+          <div class="thumb-box" style="border-color:${p.accent || '#242c3b'}44;">${p.icon || '🛒'}</div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="cat-pill">${p.category || 'Pilihan'}</span>
+              ${p.badge ? `<span class="xtra-pill">${p.badge}</span>` : ''}
+            </div>
+            <h2>${p.name}</h2>
+            ${(p.price || p.sold) ? `<div class="meta-row">${p.price ? `<span>${p.price}</span>` : ''}${p.sold ? `<span class="sold">• ${p.sold}</span>` : ''}</div>` : ''}
+            <p>${p.description || ''}</p>
+            <a class="cta" href="${p.url}" target="_blank" rel="noopener noreferrer">🛒 Cek Harga &amp; Beli di Shopee →</a>
           </div>
-          <h2>${p.name}</h2>
-          <p>${p.description || ''}</p>
-          <a class="cta" href="${p.url}" target="_blank" rel="noopener noreferrer">🛒 Cek Harga &amp; Beli di Shopee →</a>
         </article>
+      `).join('');
+    }
+
+    function renderShorts(shorts) {
+      if (!shorts.length) return;
+      document.getElementById('shorts-section').style.display = 'block';
+      document.getElementById('shorts-grid').innerHTML = shorts.map(s => `
+        <a class="short-card" href="${s.url}" target="_blank" rel="noopener">
+          <img src="https://i.ytimg.com/vi/${s.video_id}/hqdefault.jpg" alt="${s.title}" loading="lazy" />
+          <div>▶ ${s.title}</div>
+        </a>
       `).join('');
     }
 
